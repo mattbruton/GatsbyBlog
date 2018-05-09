@@ -1,5 +1,5 @@
 ---
-path: '/blog/05-08-2018'
+path: '/blog/05082018'
 title: 'First Post'
 ---
 

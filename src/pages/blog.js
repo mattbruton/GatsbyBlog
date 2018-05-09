@@ -11,12 +11,9 @@ const BlogLinkContainer = styled.div`
   flex-direction: column;
 `
 
-const IndexPage = ({ data }) => (
+const Blog = ({ data }) => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <h2>Blog Posts</h2>
+    <h1>Blog Posts</h1>
     <BlogLinkContainer>
       {data.allMarkdownRemark.edges.map(post => {
         return (
@@ -26,12 +23,12 @@ const IndexPage = ({ data }) => (
         )
       })}
     </BlogLinkContainer>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
+    <Link to="/">Go back to the homepage</Link>
   </div>
 )
 
 export const postsQuery = graphql`
-  query IndexQuery {
+  query PostsQuery {
     allMarkdownRemark(limit: 10) {
       edges {
         node {
@@ -46,4 +43,4 @@ export const postsQuery = graphql`
   }
 `
 
-export default IndexPage
+export default Blog

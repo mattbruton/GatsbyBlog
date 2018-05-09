@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
@@ -7,6 +8,7 @@ export default function Template({ data }) {
     <div>
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Link to="/blog">Back To Blog Page</Link>
     </div>
   )
 }
